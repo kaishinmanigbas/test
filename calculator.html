@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calcu.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Calculator</h2>
+        <div class="calculator">
+            <form>
+                <div class="display">
+                    <input type="text" name="display" id="display">
+                </div>
+                <div>
+                    <input type="button" value="AC" class="clear" onclick="clearDisplay()">
+                    <input type="button" value="DE" class="clear" onclick="deleteLast()">
+                    <input type="button" value="." onclick="appendValue('.')">
+                    <input type="button" class="operator" value="/" onclick="appendValue('/')">
+                </div>
+                <div>
+                    <input type="button" value="7" onclick="appendValue('7')">
+                    <input type="button" value="8" onclick="appendValue('8')">
+                    <input type="button" value="9" onclick="appendValue('9')">
+                    <input type="button" class="operator" value="*" onclick="appendValue('*')">
+                </div>
+                <div>
+                    <input type="button" value="4" onclick="appendValue('4')">
+                    <input type="button" value="5" onclick="appendValue('5')">
+                    <input type="button" value="6" onclick="appendValue('6')">
+                    <input type="button" class="operator" value="-" onclick="appendValue('-')">
+                </div>
+                <div>
+                    <input type="button" value="1" onclick="appendValue('1')">
+                    <input type="button" value="2" onclick="appendValue('2')">
+                    <input type="button" value="3" onclick="appendValue('3')">
+                    <input type="button" class="operator" value="+" onclick="appendValue('+')">
+                </div>
+                <div>
+                    <input type="button" value="00" onclick="appendValue('00')">
+                    <input type="button" value="0" onclick="appendValue('0')">
+                    <input type="button" class="equal" value="=" onclick="calculateResult()">
+                </div>
+            </form>
+            <div class="history" id="history">
+                <h3>History</h3>
+                <ul id="historyList"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="calcu.js"></script>
+</body>
+</html>
